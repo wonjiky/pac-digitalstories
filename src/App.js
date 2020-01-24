@@ -31,24 +31,23 @@ class App extends React.Component {
         ];
 
 		return (
-			<div>HELLO</div>
-			// <BrowserRouter>
-			// 	{routes.map( ({ID, component: C, path, exact}) => (
-			// 		<Route 
-			// 			key={ID}
-			// 			path={path}
-			// 			exact={exact}
-			// 			render={( {location, history}) =>
-			// 				<C query={getParams(location)} history={history} data={country} keyFigureList={keyFigureList} /> } 
-			// 		/>
-			// 	) )}
-			// 	<div>
-			// 	<ul>
-			// 		<li><Link to="/">Home</Link></li>
-			// 		<li><Link to="/fr">About</Link></li>
-			// 	</ul>
-			// 	</div>
-			// </BrowserRouter>
+			<BrowserRouter>
+				{routes.map( ({ID, component: C, path, exact}) => (
+					<Route 
+						key={ID}
+						path={path}
+						exact={exact}
+						render={( {location, history}) =>
+							<C query={getParams(location)} history={history} data={country} keyFigureList={keyFigureList} /> } 
+					/>
+				) )}
+				<div>
+				<ul>
+					<li><Link to="/">Home</Link></li>
+					<li><Link to="/fr">About</Link></li>
+				</ul>
+				</div>
+			</BrowserRouter>
 		)
 	}
 }
