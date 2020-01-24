@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/pac-digitalstories/static/css/main.05602d09.chunk.css",
-    "main.js": "/pac-digitalstories/static/js/main.fb30a2c1.chunk.js",
-    "main.js.map": "/pac-digitalstories/static/js/main.fb30a2c1.chunk.js.map",
-    "runtime-main.js": "/pac-digitalstories/static/js/runtime-main.d80cdff6.js",
-    "runtime-main.js.map": "/pac-digitalstories/static/js/runtime-main.d80cdff6.js.map",
-    "static/js/2.98769110.chunk.js": "/pac-digitalstories/static/js/2.98769110.chunk.js",
-    "static/js/2.98769110.chunk.js.map": "/pac-digitalstories/static/js/2.98769110.chunk.js.map",
-    "index.html": "/pac-digitalstories/index.html",
-    "precache-manifest.1e48373b7e5f68205024d8423584ec49.js": "/pac-digitalstories/precache-manifest.1e48373b7e5f68205024d8423584ec49.js",
-    "service-worker.js": "/pac-digitalstories/service-worker.js",
-    "static/css/main.05602d09.chunk.css.map": "/pac-digitalstories/static/css/main.05602d09.chunk.css.map",
-    "static/js/2.98769110.chunk.js.LICENSE": "/pac-digitalstories/static/js/2.98769110.chunk.js.LICENSE"
+    "main.css": "/interactive-graph/static/css/main.05602d09.chunk.css",
+    "main.js": "/interactive-graph/static/js/main.0322aafe.chunk.js",
+    "main.js.map": "/interactive-graph/static/js/main.0322aafe.chunk.js.map",
+    "runtime-main.js": "/interactive-graph/static/js/runtime-main.49d11570.js",
+    "runtime-main.js.map": "/interactive-graph/static/js/runtime-main.49d11570.js.map",
+    "static/js/2.eb622e78.chunk.js": "/interactive-graph/static/js/2.eb622e78.chunk.js",
+    "static/js/2.eb622e78.chunk.js.map": "/interactive-graph/static/js/2.eb622e78.chunk.js.map",
+    "index.html": "/interactive-graph/index.html",
+    "precache-manifest.159241d448de1118726f9e04c038c6a4.js": "/interactive-graph/precache-manifest.159241d448de1118726f9e04c038c6a4.js",
+    "service-worker.js": "/interactive-graph/service-worker.js",
+    "static/css/main.05602d09.chunk.css.map": "/interactive-graph/static/css/main.05602d09.chunk.css.map",
+    "static/js/2.eb622e78.chunk.js.LICENSE": "/interactive-graph/static/js/2.eb622e78.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.d80cdff6.js",
-    "static/js/2.98769110.chunk.js",
+    "static/js/runtime-main.49d11570.js",
+    "static/js/2.eb622e78.chunk.js",
     "static/css/main.05602d09.chunk.css",
-    "static/js/main.fb30a2c1.chunk.js"
+    "static/js/main.0322aafe.chunk.js"
   ]
 }
