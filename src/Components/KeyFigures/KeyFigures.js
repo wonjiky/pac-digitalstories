@@ -5,7 +5,7 @@ export default props => {
 
     const { data, query, onKeyFigureChange } = props;
     let lang = 'type';
-    if ( props.language === '/fr') lang = 'type_FR';
+    if ( props.language === 'fr') lang = 'type_FR';
     
     let checkValue = data.filter(d => d.type === query.keyfigure)
     return (

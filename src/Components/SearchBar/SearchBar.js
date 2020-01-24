@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './SearchBar.module.css';
 import Select from 'react-select';
-import { NONAME } from 'dns';
 
 const searchBar = props => {
 

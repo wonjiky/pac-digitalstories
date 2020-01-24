@@ -7,6 +7,8 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "d3-ease": "^1.0.6",
+    "flubber": "^0.4.2",
     "lodash": "^4.17.15",
     "query-string": "^6.10.1",
     "react": "^16.12.0",
@@ -15,7 +17,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
     "react-select": "^3.0.8",
-    "recharts": "^2.0.0-beta.1"
+    "recharts": "^2.0.0-beta.1",
+    "topojson": "^3.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

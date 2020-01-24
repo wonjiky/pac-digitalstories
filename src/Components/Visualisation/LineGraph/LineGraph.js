@@ -3,7 +3,7 @@ import { ResponsiveContainer, LineChart, YAxis, XAxis, Line, Tooltip  } from 're
 import classes from './LineGraph.module.css';
 
 const lineGraph = props => {
-    const { data } = props;
+    const { data, language } = props;
     let lineChart = (
         <ResponsiveContainer width="100%" height="100%" >
             <LineChart data={data.data}
@@ -11,7 +11,7 @@ const lineGraph = props => {
                 >
                 <XAxis strokeWidth="1px" stroke={'black'} tick={{fontSize: '11px'}} dataKey={'year'} />
                 <YAxis hide={true} tick={{fontSize: '12px'}} type="number" domain={[0, 'dataMax']} />
-                <Tooltip cursor={{ strokeWidth: 0 }} content={renderTooltip} type={data.type} />
+                <Tooltip cursor={{ strokeWidth: 0 }} content={renderTooltip} type={data.type} language={language} />
                 <Line type="monotone" dataKey="value" strokeWidth="3px" stroke={'#a70000'} fill="#a70000" activeDot={{r: 10}}/>
             </LineChart>
         </ResponsiveContainer>
@@ -27,48 +27,57 @@ const lineGraph = props => {
 export default lineGraph;
 
 const renderTooltip = props => {
-    console.log(props.type)
     if ( props.active && props.payload !== null && props.payload[0] !== null ){
         let payload = props.payload[0].payload;
-    
+    let inhab = 'inhabitants', agglos = 'agglomerations';
+    if(props.language === 'fr') {
+        inhab = 'habitants'
+        agglos = 'agglomérations';
+    }
+
+
     let tooltip = null;
     switch( props.type ) {
         case 'Upop' : 
-            return tooltip = (
+            tooltip = (
                 <p className={classes.Tooltip}>
-                        {parseFloat(payload.value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} Inhabitants
+                    {parseFloat(payload.value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} {inhab}
                 </p>
             )
         break;
         case 'Urbanlevel' : 
-            return tooltip = (
+            tooltip = (
                 <p className={classes.Tooltip}>
-                        {parseFloat(payload.value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} %
+                    {Math.round(payload.value * 100)} %
                 </p>
             )
         break;
         case 'NumAgllos' : 
-            return tooltip = (
+            tooltip = (
                 <p className={classes.Tooltip}>
-                        {parseFloat(payload.value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} agglomerations
+                    {parseFloat(payload.value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} {agglos}
                 </p>
             )
         break;
         case 'Mpop' : 
-            return tooltip = (
+            tooltip = (
                 <p className={classes.Tooltip}>
-                        {parseFloat(payload.value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} Inhabitants
+                    {Math.round(payload.value * 100)} %
                 </p>
             )
         break;
         case 'ADBA' : 
-            return tooltip = (
+            tooltip = (
                 <p className={classes.Tooltip}>
-                        {parseFloat(payload.value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} km
+                    {parseFloat(payload.value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} km
                 </p>
             )
         break;
+        default: 
+            tooltip = null;
     }
+    
+    return tooltip;
     
     }
 }

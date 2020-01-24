@@ -2,7 +2,6 @@ import React from 'react';
 import classes from './Visualisation.module.css';
 import LineGraph from './LineGraph/LineGraph';
 import KeyFigures from '../KeyFigures/KeyFigures';
-import _ from 'lodash';
 
 const visualisation = props => {
     const { 
@@ -31,6 +30,7 @@ const visualisation = props => {
         <div className={classes.Visualisation}> 
              <LineGraph 
                 data={filterData}
+                language={query.lang}
              />
              <KeyFigures 
                 language={language}
