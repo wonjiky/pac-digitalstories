@@ -1,0 +1,7 @@
+.Visualisation {
+    width: 75%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 10px;
+}
