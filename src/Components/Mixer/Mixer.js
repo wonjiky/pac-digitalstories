@@ -13,13 +13,12 @@ const mixer = props => {
 
     return (
         <div className={classes.Mixer}>
-            <CountryShape
+            {/* <CountryShape
                 shape={shape}
                 query={query}
-            />
+            /> */}
             <SearchBar 
                 options={countryList}
-                
                 onSearchChange={props.onSearchChange}
                 query={query}
                 />

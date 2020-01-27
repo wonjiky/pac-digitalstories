@@ -58,7 +58,7 @@ class Layout extends React.Component {
                             query={query}
                             history={history}
                             onKeyFigureChange={e => this.pushQueries({ 
-                                keyfigure: keyFigureList[e.target.value -1 ].type
+                                keyfigure: keyFigureList[e.value -1 ].type
                             })}
                             language={query.lang}
                             data={data[query.country - 1]}

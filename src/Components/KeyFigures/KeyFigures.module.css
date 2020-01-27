@@ -1,3 +1,8 @@
+.KeyFiguresWrapper {
+    display: flex;
+    justify-content: flex-end
+}
+
 .KeyFigures {
-    height: 10%;
+    width: 45%;
 }

@@ -28,15 +28,15 @@ const visualisation = props => {
 
     return (
         <div className={classes.Visualisation}> 
-             <LineGraph 
-                data={filterData}
-                language={query.lang}
-             />
-             <KeyFigures 
+            <KeyFigures 
                 language={language}
                 query={query}
                 data={keyFigureList}             
                 onKeyFigureChange={props.onKeyFigureChange}
+             />
+             <LineGraph 
+                data={filterData}
+                query={query}
              />
         </div>
     )
