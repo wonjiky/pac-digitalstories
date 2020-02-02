@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/pac-digitalstories/static/css/main.9e44ed51.chunk.css",
-    "main.js": "/pac-digitalstories/static/js/main.a1b6241b.chunk.js",
-    "main.js.map": "/pac-digitalstories/static/js/main.a1b6241b.chunk.js.map",
+    "main.css": "/pac-digitalstories/static/css/main.4a261f8d.chunk.css",
+    "main.js": "/pac-digitalstories/static/js/main.b5270482.chunk.js",
+    "main.js.map": "/pac-digitalstories/static/js/main.b5270482.chunk.js.map",
     "runtime-main.js": "/pac-digitalstories/static/js/runtime-main.d80cdff6.js",
     "runtime-main.js.map": "/pac-digitalstories/static/js/runtime-main.d80cdff6.js.map",
     "static/js/2.7b2a4f1b.chunk.js": "/pac-digitalstories/static/js/2.7b2a4f1b.chunk.js",
     "static/js/2.7b2a4f1b.chunk.js.map": "/pac-digitalstories/static/js/2.7b2a4f1b.chunk.js.map",
     "index.html": "/pac-digitalstories/index.html",
-    "precache-manifest.c91e320c1ad5e82773471e89e3d67e1e.js": "/pac-digitalstories/precache-manifest.c91e320c1ad5e82773471e89e3d67e1e.js",
+    "precache-manifest.493132192fa691b1d45a062a7b9b17a2.js": "/pac-digitalstories/precache-manifest.493132192fa691b1d45a062a7b9b17a2.js",
     "service-worker.js": "/pac-digitalstories/service-worker.js",
-    "static/css/main.9e44ed51.chunk.css.map": "/pac-digitalstories/static/css/main.9e44ed51.chunk.css.map",
+    "static/css/main.4a261f8d.chunk.css.map": "/pac-digitalstories/static/css/main.4a261f8d.chunk.css.map",
     "static/js/2.7b2a4f1b.chunk.js.LICENSE": "/pac-digitalstories/static/js/2.7b2a4f1b.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.d80cdff6.js",
     "static/js/2.7b2a4f1b.chunk.js",
-    "static/css/main.9e44ed51.chunk.css",
-    "static/js/main.a1b6241b.chunk.js"
+    "static/css/main.4a261f8d.chunk.css",
+    "static/js/main.b5270482.chunk.js"
   ]
 }
