@@ -1,3 +1,11 @@
-.SearchBar {  
-    
+@media (max-width: 650px) { 
+    .SearchBar {
+        width: 50%;
+    }
+}
+
+.SearchBar__Sm {
+    width: 50%;
+    padding: 0 10px;
+    box-sizing: border-box;
 }

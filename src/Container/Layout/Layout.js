@@ -29,7 +29,7 @@ class Layout extends React.Component {
     
     render() {
         const { 
-            data,
+            data, shape,
             history,
             query,
             keyFigureList,
@@ -37,7 +37,7 @@ class Layout extends React.Component {
 
         //Set searchbar options
         let dataLanguage = 'Country'
-        if ( history.location.pathname === '/fr') dataLanguage='Country_FR';
+        if ( query.lang === 'fr') dataLanguage='Country_FR';
         let countryList = data.map(c => ({ value: c.ISO, label: c[dataLanguage] }))
 
 
@@ -49,17 +49,23 @@ class Layout extends React.Component {
                 return (
                     <div className={classes.Layout}>
                         <Mixer 
+                            shape={shape}
                             countryList={countryList}
                             query={query}
+                            onKeyFigureChange={e => this.pushQueries({ 
+                                keyfigure: keyFigureList[e.value -1 ].type
+                            })}
+                            keyFigureList={keyFigureList}
+                            language={query.lang}
                             onSearchChange={e => this.pushQueries({ country: e.value })}
                         />
                         <Visualisation 
                             query={query}
                             history={history}
                             onKeyFigureChange={e => this.pushQueries({ 
-                                keyfigure: keyFigureList[e.target.value -1 ].type
+                                keyfigure: keyFigureList[e.value -1 ].type
                             })}
-                            language={history.location.pathname}
+                            language={query.lang}
                             data={data[query.country - 1]}
                             keyFigureList={keyFigureList}
                         />

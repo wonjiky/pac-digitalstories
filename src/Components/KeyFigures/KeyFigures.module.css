@@ -1,3 +1,20 @@
+.KeyFiguresWrapper {
+    display: flex;
+    justify-content: flex-end
+}
+
 .KeyFigures {
-    height: 10%;
+    width: 45%;
+}
+
+@media (max-width: 650px) { 
+    .KeyFiguresWrapper {
+        width: 50%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .KeyFigures {
+        width: 100%;
+    }
 }

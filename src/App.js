@@ -2,7 +2,8 @@ import React from 'react';
 import queryString from 'query-string';
 import LayoutContainer from './Container/Layout/LayoutContainer';
 import Countries from './data/countries';
-import { Route, BrowserRouter, Switch, Link } from 'react-router-dom';
+import Shapefile from './data/geo_country';
+import { Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 
 
@@ -10,16 +11,16 @@ class App extends React.Component {
 
 	state = {
 		country: Countries,
+		shape: Shapefile,
 	}
 
 	render() {
 		const { 
-			country,
+			country, shape
 		} = this.state;
 
 		const routes = [
-			{ ID:2, component: LayoutContainer, path: "/fr", exact: false},
-			{ ID:1, component: LayoutContainer, path: "/", exact: true},
+			{ ID:1, component: LayoutContainer, path: "/", exact: true}
 		];
 
 		let keyFigureList = [
@@ -31,18 +32,23 @@ class App extends React.Component {
         ];
 
 		return (
-			<BrowserRouter>
-				<Switch>
-					{routes.map( ({ID, component: C, path, exact}) => (
-						<Route 
-							key={ID}
-							path={path}
-							exact={exact}
-							render={( {location, history}) =>
-								<C query={getParams(location)} history={history} data={country} keyFigureList={keyFigureList} /> } 
-						/>
-					) )}
-				</Switch>
+			<BrowserRouter basename='/pac-digitalstories'>
+				{routes.map( ({ID, component: C, path, exact}) => (
+					<Route 
+						key={ID}
+						path={path}
+						exact={exact}
+						render={( {location, history}) =>
+							<C 
+								query={getParams(location)} 
+								history={history} 
+								data={country} 
+								shape={shape} 
+								keyFigureList={keyFigureList} 
+								/> 
+							} 
+					/>
+				) )}
 			</BrowserRouter>
 		)
 	}

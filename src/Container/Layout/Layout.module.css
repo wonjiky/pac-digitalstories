@@ -1,6 +1,16 @@
 .Layout {
     background-color: #fef7e7;
     display: flex;
-    width: 1024px;
+    margin: 0 auto;
+    max-width: 1059px;
     height: 600px;
+}
+
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 650px) { 
+    .Layout {
+        flex-flow: column;
+        width: 100%;
+    }
 }
