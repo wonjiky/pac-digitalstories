@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pac-digitalstories/precache-manifest.07a5a7bfe9e2cc1145b9302524b56f18.js"
+  "/pac-digitalstories/precache-manifest.81a9d15042cecc8d81f70fdad8f430ea.js"
 );
 
 self.addEventListener('message', (event) => {
