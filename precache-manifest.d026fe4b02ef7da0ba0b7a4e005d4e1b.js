@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fa610037aeec61220a41c2b377b49067",
+    "revision": "2283cdf9a91828e34df1af7e5d586ec7",
     "url": "/pac-digitalstories/index.html"
   },
   {
-    "revision": "9329cf81c615099e2b3c",
-    "url": "/pac-digitalstories/static/css/main.4a261f8d.chunk.css"
+    "revision": "dfe2a780ea63a4288da1",
+    "url": "/pac-digitalstories/static/css/main.140fb89d.chunk.css"
   },
   {
     "revision": "e7fdcfe1ec0ab1b0a35a",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pac-digitalstories/static/js/2.7b2a4f1b.chunk.js.LICENSE"
   },
   {
-    "revision": "9329cf81c615099e2b3c",
+    "revision": "dfe2a780ea63a4288da1",
     "url": "/pac-digitalstories/static/js/main.b5270482.chunk.js"
   },
   {
