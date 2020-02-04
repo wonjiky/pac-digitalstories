@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './Visualisation.module.css';
 import LineGraph from './LineGraph/LineGraph';
-import LineChart from './LineChart/LineChart';
 import KeyFigures from '../KeyFigures/KeyFigures';
 
 const visualisation = props => {
@@ -24,16 +23,15 @@ const visualisation = props => {
         for (let i in data) {
             res.push({ 
                 year: i, 
-                value: dataType[0].ID === 2 ? data[i] * 100 : 
-                dataType[0].ID === 4 ? data[i] * 100 : 
-                // dataType[0].ID === 1 ? Math.round(data[i]/1000)*1000 :
+                value: 
+                dataType[0].ID === 2 && query.country <= 50 ? data[i] * 100 : 
+                dataType[0].ID === 4 && query.country <= 50 ? data[i] * 100 : 
                 data[i],
                 yAxisKey: data[i]
             })
         }
         return res;
     }
-
     let line = <LineGraph 
         data={filterData}
         query={query}

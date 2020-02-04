@@ -3,12 +3,11 @@ import classes from './SearchBar.module.css';
 import Select from 'react-select';
 
 const searchBar = props => {
-console.log(props);
     const {
         options,
         query,
     } = props;
-
+    let flattenedOption = [ ...options[0].options, ...options[1].options];
     return (
         <div className={classes.SearchBar}>
             <Select 
@@ -17,7 +16,7 @@ console.log(props);
                 menuIsOpen={true}
                 options={options}
                 isSearchable={false}
-                value={options[query.country-1]}
+                value={flattenedOption.filter(d => d.value === Number(query.country))}
                 components={{
                   Control: () => null
                 }}

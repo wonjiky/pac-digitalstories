@@ -4,7 +4,6 @@ import classes from './LineGraph.module.css';
 
 const lineGraph = props => {
     const { data, query } = props;
-
     let toPercent = value => {
         let domain;
         switch( data.type ) {
@@ -28,7 +27,6 @@ const lineGraph = props => {
         }
         return domain;
     }
-
     let lineChart = (
         <ResponsiveContainer height="100%" >
             <LineChart data={data.data} margin={{top: 10, right: 20, left: 20, bottom: 10}}
@@ -38,7 +36,7 @@ const lineGraph = props => {
                 <YAxis tickFormatter={toPercent} dataKey='value' strokeWidth="0px" stroke='black' tick={{fontSize: '11px'}} 
                     domain ={ [ (dataMin) => min(dataMin, data.type), (dataMax) => max(dataMax, data.type) ] }/>
                 {/* domain={domain(data.type, 'dataMin', 'dataMax')} /> */}
-                <Tooltip cursor={{ strokeWidth: 0 }} content={renderTooltip} type={data.type} language={query.language} />
+                <Tooltip cursor={{ strokeWidth: 0 }} content={renderTooltip} type={data.type} language={query.lang} />
                 <Line type="monotone" dataKey="value" strokeWidth="3px" stroke={'#a70000'} fill="#a70000" activeDot={{r: 10}}/>
             </LineChart>
         </ResponsiveContainer>

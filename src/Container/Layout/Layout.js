@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Layout.module.css';
 import Mixer from '../../Components/Mixer/Mixer';
 import Visualisation from '../../Components/Visualisation/Visualisation';
-
+import _ from 'lodash';
 
 class Layout extends React.Component {
     state = { }
@@ -38,9 +38,20 @@ class Layout extends React.Component {
         //Set searchbar options
         let dataLanguage = 'Country'
         if ( query.lang === 'fr') dataLanguage='Country_FR';
-        let countryList = data.map(c => ({ value: c.ISO, label: c[dataLanguage] }))
-
-
+        data.sort((a, b) => a.ISO - b.ISO);
+        let countryList = _.chain(data)
+            .map(c => ({ value: c.ISO, label: c[dataLanguage] }))
+            .sort((a,b) => a.value - b.value)
+            .chunk(50)
+            .value()
+        let options = [
+            { label: 'Regions', options: sortAlphabetically(countryList[1]) },
+            { label: 'Countries', options: sortAlphabetically(countryList[0]) }
+        ];
+         
+        function sortAlphabetically(data) {
+            return data.sort((a,b) => a.label.localeCompare(b.label));
+        }
 
         if ( data.length === 0 ||
             Object.entries(query).length ===0 ){
@@ -50,7 +61,7 @@ class Layout extends React.Component {
                     <div className={classes.Layout}>
                         <Mixer 
                             shape={shape}
-                            countryList={countryList}
+                            countryList={options}
                             query={query}
                             onKeyFigureChange={e => this.pushQueries({ 
                                 keyfigure: keyFigureList[e.value -1 ].type

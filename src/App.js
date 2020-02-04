@@ -27,7 +27,7 @@ class App extends React.Component {
             { "ID": 1, "label": "Upop", "type": "Urban population", "type_FR": "Population urbaine" },
             { "ID": 2, "label": "Urbanlevel", "type": "Level of urbanisation", "type_FR": "Niveau d'urbanisation" },
             { "ID": 3, "label": "NumAgllos", "type": "Number of agglomerations", "type_FR": "Nombre d'agglomérations" },
-            { "ID": 4, "label": "Mpop", "type": "Metropolitan population", "type_FfR": "Population métropolitaine" },
+            { "ID": 4, "label": "Mpop", "type": "Metropolitan population", "type_FR": "Population métropolitaine" },
             { "ID": 5, "label": "ADBA", "type": "Average distance between agglomerations", "type_FR": "Distance moyenne entre les agglomérations" }
         ];
 

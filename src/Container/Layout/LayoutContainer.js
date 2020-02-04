@@ -5,7 +5,7 @@ class LayoutContainer extends React.Component {
 
 	componentDidMount() {
         if ( Object.entries(this.props.query).length === 0 ) {
-            this.pushQueries({country: 1, keyfigure: "Urban population", lang: 'en'})
+            this.pushQueries({country: 51, keyfigure: "Urban population", lang: 'en'})
         }
 	}
 	

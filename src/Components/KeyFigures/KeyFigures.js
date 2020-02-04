@@ -3,7 +3,7 @@ import classes from './KeyFigures.module.css';
 import Select from 'react-select';
 
 export default props => {
-
+    
     const { data, query, onKeyFigureChange } = props;
     let lang = 'type';
     if ( props.language === 'fr') lang = 'type_FR';
@@ -12,7 +12,6 @@ export default props => {
     let options = data.map(d => ({
         value: d.ID, label: d[lang]
     }))
-
     let style = props.type === 'small' ? styles__sm : styles;
 
     return (
