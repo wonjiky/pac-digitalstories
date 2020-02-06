@@ -44,9 +44,12 @@ class Layout extends React.Component {
             .sort((a,b) => a.value - b.value)
             .chunk(50)
             .value()
+
         let options = [
-            { label: 'Regions', options: sortAlphabetically(countryList[1]) },
-            { label: 'Countries', options: sortAlphabetically(countryList[0]) }
+            { label: query.lang === 'en' ? 'Regions' : 'Régions',
+                 options: sortAlphabetically(countryList[1]) },
+            { label: query.lang === 'en' ? 'Countries' : 'Pays',
+                 options: sortAlphabetically(countryList[0]) }
         ];
          
         function sortAlphabetically(data) {
