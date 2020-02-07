@@ -27,7 +27,6 @@ export default props => {
                 components={
                     props.type ==='small' ? null : 
                     {
-                        // DropdownIndicator: null,
                         IndicatorSeparator: null,
                     }
                 }

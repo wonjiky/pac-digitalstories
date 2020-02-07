@@ -29,7 +29,7 @@ const lineGraph = props => {
     }
     let lineChart = (
         <ResponsiveContainer height="100%" >
-            <LineChart data={data.data} margin={{top: 10, right: 20, left: 20, bottom: 10}}
+            <LineChart data={data.data} margin={{top: 10, right: 20, left: 10, bottom: 10}}
                 >
                 <CartesianGrid vertical={false} strokeDasharray="3 3" />
                 <XAxis stroke={'black'} interval={0} tick={<CustomizedAxisTick />} tickSize={10} dataKey={'year'} />

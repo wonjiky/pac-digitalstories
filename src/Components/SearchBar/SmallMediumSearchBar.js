@@ -8,6 +8,8 @@ const searchBar = props => {
         options,
         query,
     } = props;
+    let flattenedOption = [ ...options[0].options, ...options[1].options];
+    let value = flattenedOption.filter(d => d.value === Number(query.country));
 
     return (
         <div className={classes.SearchBar__Sm}>
@@ -15,8 +17,7 @@ const searchBar = props => {
                 styles={styles}
                 onChange={props.onSearchChange}
                 options={options}
-                // isSearchable={false}
-                value={options[query.country-1]}
+                value={value}
             />
         </div>
     )
