@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/pac-digitalstories/static/css/main.7bc9016c.chunk.css",
-    "main.js": "/pac-digitalstories/static/js/main.670923b7.chunk.js",
-    "main.js.map": "/pac-digitalstories/static/js/main.670923b7.chunk.js.map",
+    "main.css": "/pac-digitalstories/static/css/main.6d656519.chunk.css",
+    "main.js": "/pac-digitalstories/static/js/main.e150c3b2.chunk.js",
+    "main.js.map": "/pac-digitalstories/static/js/main.e150c3b2.chunk.js.map",
     "runtime-main.js": "/pac-digitalstories/static/js/runtime-main.d80cdff6.js",
     "runtime-main.js.map": "/pac-digitalstories/static/js/runtime-main.d80cdff6.js.map",
-    "static/js/2.b1054ad1.chunk.js": "/pac-digitalstories/static/js/2.b1054ad1.chunk.js",
-    "static/js/2.b1054ad1.chunk.js.map": "/pac-digitalstories/static/js/2.b1054ad1.chunk.js.map",
+    "static/js/2.7ec09d7d.chunk.js": "/pac-digitalstories/static/js/2.7ec09d7d.chunk.js",
+    "static/js/2.7ec09d7d.chunk.js.map": "/pac-digitalstories/static/js/2.7ec09d7d.chunk.js.map",
     "index.html": "/pac-digitalstories/index.html",
-    "precache-manifest.aabcb2e9395b810511e9bf779bfe85bc.js": "/pac-digitalstories/precache-manifest.aabcb2e9395b810511e9bf779bfe85bc.js",
+    "precache-manifest.ec9ec913f1200ed28baa897ae2819a28.js": "/pac-digitalstories/precache-manifest.ec9ec913f1200ed28baa897ae2819a28.js",
     "service-worker.js": "/pac-digitalstories/service-worker.js",
-    "static/css/main.7bc9016c.chunk.css.map": "/pac-digitalstories/static/css/main.7bc9016c.chunk.css.map",
-    "static/js/2.b1054ad1.chunk.js.LICENSE": "/pac-digitalstories/static/js/2.b1054ad1.chunk.js.LICENSE"
+    "static/css/main.6d656519.chunk.css.map": "/pac-digitalstories/static/css/main.6d656519.chunk.css.map",
+    "static/js/2.7ec09d7d.chunk.js.LICENSE": "/pac-digitalstories/static/js/2.7ec09d7d.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.d80cdff6.js",
-    "static/js/2.b1054ad1.chunk.js",
-    "static/css/main.7bc9016c.chunk.css",
-    "static/js/main.670923b7.chunk.js"
+    "static/js/2.7ec09d7d.chunk.js",
+    "static/css/main.6d656519.chunk.css",
+    "static/js/main.e150c3b2.chunk.js"
   ]
 }
