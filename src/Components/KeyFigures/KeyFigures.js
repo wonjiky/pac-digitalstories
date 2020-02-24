@@ -1,16 +1,19 @@
 import React from 'react';
 import classes from './KeyFigures.module.css';
-import Select from 'react-select';
+import Select, { components } from 'react-select'; 
 
 export default props => {
     
     const { data, query, onKeyFigureChange } = props;
-    let lang = 'type';
-    if ( props.language === 'fr') lang = 'type_FR';
+    let lang = 'type', description = 'description';
+    if ( props.language === 'fr') {
+      lang = 'type_FR'
+      description = 'description_FR'
+    }
     
     let checkValue = data.filter(d => d.type === query.keyfigure)
     let options = data.map(d => ({
-        value: d.ID, label: d[lang]
+        value: d.ID, label: d[lang], description: d[description]
     }))
     let style = props.type === 'small' ? styles__sm : styles;
 
@@ -20,36 +23,35 @@ export default props => {
                 options={options}
                 styles={style}
                 className={classes.KeyFigures}
-                isRtl={false}
                 isSearchable={false}
                 value={options[checkValue[0].ID - 1]}
                 onChange={onKeyFigureChange}
-                components={
-                    props.type ==='small' ? null : 
-                    {
-                        IndicatorSeparator: null,
-                    }
-                }
+                // components={
+                    // props.type ==='small' ? null : {IndicatorSeparator: null},
+                // }
+                components={{
+                  // IndicatorSeparator: null,
+                  IndicatorsContainer: IndicatorsContainer
+                }}
             />
         </div>
-        // <form className={classes.KeyFigures}>
-        //     {data.map(d => (
-        //         <React.Fragment key={d.ID}>
-        //             <input 
-        //                 key={d.ID}
-        //                 type="radio" 
-        //                 value={d.ID} 
-        //                 checked={checkValue[0].ID === d.ID} 
-        //                 onChange={onKeyFigureChange}
-        //             />
-        //             <label>
-        //                 {d[lang]}   
-        //             </label> 
-        //         </React.Fragment>
-        //     ))}
-        // </form> 
     );
 };
+
+const IndicatorsContainer = props => {
+  console.log(props.selectProps.value.description);
+  return (
+    <div className={classes.Control}>
+      <div className={classes.ControlInfo}>
+        <i className={classes["material-icons"]}> info </i>
+        <div className={classes.InfoTooltip}>
+            {props.selectProps.value.description}
+        </div>
+      </div>
+      <components.IndicatorsContainer {...props} />
+    </div>
+  )
+}
 
 const styles__sm = {
   indicatorSeparator: (base, state) => {

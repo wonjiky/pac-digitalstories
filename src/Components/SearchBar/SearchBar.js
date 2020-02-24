@@ -19,6 +19,7 @@ const searchBar = props => {
                 value={flattenedOption.filter(d => d.value === Number(query.country))}
                 components={{
                   Control: () => null
+
                 }}
             />
         </div>
